@@ -995,7 +995,7 @@ esac
 				<string>on run argv
 	tell application id "com.runningwithcrayons.Alfred"
 		set bundleID to (system attribute "alfred_workflow_bundleid")
-		set configuration (system attribute "setting") to value argv in workflow bundleID
+		set configuration "browser" to value argv in workflow bundleID
 	end tell
 end run</string>
 				<key>scriptargtype</key>
@@ -1022,7 +1022,7 @@ end run</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>{var:notifier}</string>
+				<string>Default browser changed</string>
 				<key>title</key>
 				<string>{const:alfred_workflow_name}</string>
 			</dict>
@@ -1070,52 +1070,52 @@ cat &lt;&lt; EOB
 	{
 		"title": "System Default",
 		"arg": "",
-		$([[ -z ${(P)setting} ]] &amp;&amp; echo $currSelected)
+		$([[ -z ${browser} ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Arc",
 		"arg": "company.thebrowser.Browser",
-		$([[ ${(P)setting} == "company.thebrowser.Browser" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "company.thebrowser.Browser" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Chromium",
 		"arg": "org.chromium.Chromium",
-		$([[ ${(P)setting} == "org.chromium.Chromium" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "org.chromium.Chromium" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Firefox",
 		"arg": "org.mozilla.firefox",
-		$([[ ${(P)setting} == "org.mozilla.firefox" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "org.mozilla.firefox" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Google Chrome",
 		"arg": "com.google.Chrome",
-		$([[ ${(P)setting} == "com.google.Chrome" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "com.google.Chrome" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Microsoft Edge",
 		"arg": "com.microsoft.edgemac",
-		$([[ ${(P)setting} == "com.microsoft.edgemac" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "com.microsoft.edgemac" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Opera",
 		"arg": "com.operasoftware.Opera",
-		$([[ ${(P)setting} == "com.operasoftware.Opera" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "com.operasoftware.Opera" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Orion",
 		"arg": "com.kagi.kagimacOS",
-		$([[ ${(P)setting} == "com.kagi.kagimacOS" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "com.kagi.kagimacOS" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Safari",
 		"arg": "com.apple.Safari",
-		$([[ ${(P)setting} == "com.apple.Safari" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "com.apple.Safari" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Zen",
 		"arg": "app.zen-browser.zen",
-		$([[ ${(P)setting} == "app.zen-browser.zen" ]] &amp;&amp; echo $currSelected)
+		$([[ ${browser} == "app.zen-browser.zen" ]] &amp;&amp; echo $currSelected)
 	}
 ]}
 EOB</string>
