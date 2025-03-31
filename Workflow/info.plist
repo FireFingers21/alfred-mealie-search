@@ -1704,6 +1704,6 @@ Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/
 	<key>version</key>
 	<string>2025.3</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/FireFingers21/alfred-mealie-search</string>
 </dict>
 </plist>
