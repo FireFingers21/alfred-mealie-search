@@ -2,6 +2,8 @@
 
 Search & View Mealie Recipes in Alfred
 
+[⤓ Install from the Alfred Gallery](https://alfred.app/workflows/firefingers21/mealie-search/)
+
 ## Setup
 
 Set the Base URL and API Token of your [Mealie](https://github.com/mealie-recipes/mealie/) installation in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). You can generate an API Token from your Mealie user profile under API Tokens.
